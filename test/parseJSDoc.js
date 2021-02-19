@@ -23,6 +23,7 @@ describe('parseString', ()=> {
 				].join('\n')) // Split back into an array
 		).to.be.deep.equal([
 			{
+				endpoint: 'oapi',
 				description: 'Search for widgets',
 				route: {method: 'GET', url: '/api/widgets/search'},
 				params: [
