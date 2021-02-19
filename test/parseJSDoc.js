@@ -25,7 +25,7 @@ describe('parseString', ()=> {
 			{
 				endpoint: 'oapi',
 				description: 'Search for widgets',
-				route: {method: 'GET', url: '/api/widgets/search'},
+				route: {method: 'get', path: '/api/widgets/search'},
 				params: [
 					{type: 'string', name: 'req.query.q', description: 'Query to run'},
 				],

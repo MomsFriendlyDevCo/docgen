@@ -22,17 +22,20 @@ describe('parseString', ()=> {
 					'*/',
 				].join('\n')) // Split back into an array
 		).to.be.deep.equal({
+			jsdoc: [
+				{
+					description: 'Simple function that adds two numbers together',
+					params: [
+						{type: 'number', name: 'a', description: 'First number to add'},
+						{type: 'number', name: 'b', description: 'Second number to add'},
+					],
+					returns: {type: 'number', description: 'The sum of both numbers'},
+				},
+			],
 			oapi: {
 				paths: {
 					'/api/widgets/search': {
-						get: {
-							summary: 'Search for widgets',
-							responses: {
-								200: {
-									description: '200 response',
-								},
-							},
-						},
+						get: {summary: 'Search for widgets'},
 					},
 				},
 			},
