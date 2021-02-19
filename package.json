@@ -1,0 +1,29 @@
+{
+  "name": "@momsfriendlydevco/jsdoc-oapi",
+  "version": "0.0.0",
+  "description": "JSDoc + OpenAPI inline documentation parser",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MomsFriendlyDevCo/jsdoc-oapi.git"
+  },
+  "keywords": [
+    "openapi",
+    "jsdoc",
+    "documentation",
+    "docs"
+  ],
+  "author": "Matt Carter <m@ttcarter.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MomsFriendlyDevCo/jsdoc-oapi/issues"
+  },
+  "homepage": "https://github.com/MomsFriendlyDevCo/jsdoc-oapi#readme",
+  "devDependencies": {
+    "chai": "^4.3.0",
+    "mocha": "^8.3.0"
+  }
+}
