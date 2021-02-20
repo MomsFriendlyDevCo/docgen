@@ -19,7 +19,7 @@ app.get('/api/widgets/search', (req, res) => { });
 /**
 * Fetch a specific widget
 *
-* @route GET /api/widgets/:d
+* @route GET /api/widgets/:id
 * @param {string} req.params.id The ID of the widget to fetch
 * @returns {object} The fetched widget
 */
