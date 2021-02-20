@@ -13,16 +13,20 @@ describe('widgets E2E test', ()=> {
 		expect(contents).to.be.deep.equal({
 			jsdoc: [
 				{
-					METHOD: 'app.db.widgets.find',
+					name: 'app.db.widgets.find',
 					description: 'List all widgets',
+					function: true,
+					global: true,
 					params: [
 						{type: 'object', name: '[query]', description: 'Additional query parameters'},
 					],
 					returns: {type: 'array<object>', description: 'Widgets matching the query'},
 				},
 				{
-					METHOD: 'app.db.widgets.findById',
+					name: 'app.db.widgets.findById',
 					description: 'Fetch a specific widget',
+					function: true,
+					global: true,
 					params: [
 						{type: 'string', name: 'id', description: 'The widget ID to find'},
 					],
@@ -37,7 +41,7 @@ describe('widgets E2E test', ()=> {
 					'/api/widgets/search': {
 						get: {summary: 'Search for specific widgets by a loose term'},
 					},
-					'/api/widgets/:d': {
+					'/api/widgets/:id': {
 						get: {summary: 'Fetch a specific widget'},
 					},
 				},
