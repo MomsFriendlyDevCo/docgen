@@ -1,5 +1,8 @@
-var expect = require('chai').expect;
-var {DocReader} = require('..');
+import {expect} from 'chai';
+import DocReader from '@momsfriendlydevco/docgen/DocReader';
+import fspath from 'path';
+
+let __dirname = fspath.resolve(fspath.dirname(decodeURI(new URL(import.meta.url).pathname)));
 
 describe('widgets E2E test', ()=> {
 

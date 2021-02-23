@@ -1,5 +1,5 @@
-var expect = require('chai').expect;
-var {DocReader} = require('..');
+import {expect} from 'chai';
+import DocReader from '@momsfriendlydevco/docgen/DocReader';
 
 describe('parseString', ()=> {
 

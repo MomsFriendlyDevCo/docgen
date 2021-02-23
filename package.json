@@ -2,7 +2,10 @@
   "name": "@momsfriendlydevco/docgen",
   "version": "0.0.0",
   "description": "Documentation generator for JSDoc + JSDoc-to-OpenAPI",
-  "main": "index.js",
+  "type": "module",
+  "exports": {
+    "./*": "./lib/*.js"
+  },
   "scripts": {
     "test": "mocha"
   },
