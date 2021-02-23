@@ -1,7 +1,7 @@
 {
   "name": "@momsfriendlydevco/docgen",
   "version": "0.0.0",
-  "description": "JSDoc + OpenAPI inline documentation parser and generator",
+  "description": "Documentation generator for JSDoc + JSDoc-to-OpenAPI",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
@@ -11,8 +11,8 @@
     "url": "git+https://github.com/MomsFriendlyDevCo/docgen.git"
   },
   "keywords": [
-    "openapi",
     "jsdoc",
+    "openapi",
     "documentation",
     "docs"
   ],
