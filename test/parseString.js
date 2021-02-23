@@ -42,6 +42,7 @@ describe('parseString', ()=> {
 								in: 'query',
 								name: 'q',
 								required: true,
+								schema: {type: 'string'},
 							}],
 						},
 					},
