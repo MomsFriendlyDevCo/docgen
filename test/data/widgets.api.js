@@ -1,6 +1,6 @@
 /**
 * List all widgets
-* @param {object} [query] Additional query parameters
+* @param {object} [query] Additional query parameters, if any
 * @returns {array<object>} Widgets matching the query
 */
 app.db.widgets.find = query => { };

@@ -27,15 +27,15 @@ describe('parseString', ()=> {
 				description: 'Search for widgets',
 				route: {method: 'get', path: '/api/widgets/search'},
 				params: [
-					{type: 'string', name: 'req.query.q', description: 'Query to run'},
+					{type: 'string', name: 'req.query.q', description: 'Query to run', isRequired: true},
 				],
 				returns: {type: 'Object', description: 'Response object'},
 			},
 			{
 				description: 'Simple function that adds two numbers together',
 				params: [
-					{type: 'number', name: 'a', description: 'First number to add'},
-					{type: 'number', name: 'b', description: 'Second number to add'},
+					{type: 'number', name: 'a', description: 'First number to add', isRequired: true},
+					{type: 'number', name: 'b', description: 'Second number to add', isRequired: true},
 				],
 				returns: {type: 'number', description: 'The sum of both numbers'},
 			},

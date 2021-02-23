@@ -18,7 +18,7 @@ describe('widgets E2E test', ()=> {
 					function: true,
 					global: true,
 					params: [
-						{type: 'object', name: '[query]', description: 'Additional query parameters'},
+						{type: 'object', name: 'query', description: 'Additional query parameters, if any', isRequired: false},
 					],
 					returns: {type: 'array<object>', description: 'Widgets matching the query'},
 				},
@@ -28,7 +28,7 @@ describe('widgets E2E test', ()=> {
 					function: true,
 					global: true,
 					params: [
-						{type: 'string', name: 'id', description: 'The widget ID to find'},
+						{type: 'string', name: 'id', description: 'The widget ID to find', isRequired: true},
 					],
 					returns: {type: 'object', description: 'Found widget or undefined'},
 				},
@@ -36,13 +36,33 @@ describe('widgets E2E test', ()=> {
 			oapi: {
 				paths: {
 					'/api/widgets': {
-						get: {summary: 'List all widgets within the system'},
+						get: {
+							description: 'List all widgets within the system',
+						},
 					},
 					'/api/widgets/search': {
-						get: {summary: 'Search for specific widgets by a loose term'},
+						get: {
+							description: 'Search for specific widgets by a loose term',
+							parameters: [{
+								description: "Query to search by",
+								in: 'query',
+								name: 'q',
+								required: true,
+								schema: {type: 'string'},
+							}],
+						},
 					},
 					'/api/widgets/:id': {
-						get: {summary: 'Fetch a specific widget'},
+						get: {
+							description: 'Fetch a specific widget',
+							parameters: [{
+								description: "The ID of the widget to fetch",
+								in: 'path',
+								name: 'id',
+								required: true,
+								schema: {type: 'string'},
+							}],
+						},
 					},
 				},
 			},

@@ -26,8 +26,8 @@ describe('parseString', ()=> {
 				{
 					description: 'Simple function that adds two numbers together',
 					params: [
-						{type: 'number', name: 'a', description: 'First number to add'},
-						{type: 'number', name: 'b', description: 'Second number to add'},
+						{type: 'number', name: 'a', description: 'First number to add', isRequired: true},
+						{type: 'number', name: 'b', description: 'Second number to add', isRequired: true},
 					],
 					returns: {type: 'number', description: 'The sum of both numbers'},
 				},
@@ -35,7 +35,15 @@ describe('parseString', ()=> {
 			oapi: {
 				paths: {
 					'/api/widgets/search': {
-						get: {summary: 'Search for widgets'},
+						get: {
+							description: 'Search for widgets',
+							parameters: [{
+								description: 'Query to run',
+								in: 'query',
+								name: 'q',
+								required: true,
+							}],
+						},
 					},
 				},
 			},
