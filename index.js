@@ -1,5 +1,7 @@
 var fs = require('fs');
 
 module.exports = {
-	JSDOAPIReader: require('./lib/jsdoapireader'),
+	DefaultParsers: require('./lib/defaultparsers'),
+	DocReader: require('./lib/docreader'),
+	DocResponse: require('./lib/docresponse'),
 };

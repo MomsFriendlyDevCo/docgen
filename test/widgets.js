@@ -1,10 +1,10 @@
 var expect = require('chai').expect;
-var {JSDOAPIReader} = require('..');
+var {DocReader} = require('..');
 
 describe('widgets E2E test', ()=> {
 
 	it('should parse the widget example', async ()=> {
-		var contents = await (new JSDOAPIReader())
+		var contents = await (new DocReader())
 			.parseFiles([
 				`${__dirname}/data/widgets.api.js`,
 				`${__dirname}/data/widgets.rest.js`,

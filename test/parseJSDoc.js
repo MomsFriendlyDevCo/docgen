@@ -1,11 +1,11 @@
 var expect = require('chai').expect;
-var {JSDOAPIReader} = require('..');
+var {DocReader} = require('..');
 
 describe('parseString', ()=> {
 
 	it('should parse combined JSDoc blocks', ()=> {
 		expect(
-			(new JSDOAPIReader())
+			(new DocReader())
 				.parseJSDoc([
 					'/**',
 					'* Search for widgets',
