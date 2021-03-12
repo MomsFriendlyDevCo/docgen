@@ -3,11 +3,6 @@
   "version": "0.0.0",
   "description": "Documentation generator for JSDoc + JSDoc-to-OpenAPI",
   "main": "dist/main.js",
-  "type": "module",
-  "exports": {
-    ".": "./index.js",
-    "./*": "./lib/*.js"
-  },
   "scripts": {
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
@@ -31,10 +26,9 @@
   "homepage": "https://github.com/MomsFriendlyDevCo/docgen#readme",
   "devDependencies": {
     "@babel/core": "^7.12.16",
-    "@babel/plugin-proposal-optional-chaining": "^7.12.1",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
     "@babel/plugin-proposal-pipeline-operator": "^7.12.1",
     "@babel/plugin-proposal-throw-expressions": "^7.12.13",
-    "@babel/plugin-transform-destructuring": "^7.13.0",
     "@babel/preset-env": "^7.12.16",
     "babel-loader": "^8.2.2",
     "chai": "^4.3.0",
