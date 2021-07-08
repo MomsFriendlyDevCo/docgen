@@ -1,5 +1,6 @@
-import {expect} from 'chai';
-import DocReader from '@momsfriendlydevco/docgen/DocReader';
+const expect = require('chai').expect;
+const _ = require('lodash');
+const DocReader  = require('../').DocReader;
 
 describe('parseString', ()=> {
 
